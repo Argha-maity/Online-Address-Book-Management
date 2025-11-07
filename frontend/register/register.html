@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register here</title>
+    <link rel="stylesheet" href="/frontend/register/register.css">
+</head>
+
+<body>
+
+    <div class="auth-container">
+
+        <div id="login-form">
+            <h2>Welcome Back</h2>
+            <div class="form-context"></div>
+
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <input type="email" id="login-email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <div class="password-container">
+                        <input type="password" id="login-password" name="password" placeholder="Password" required>
+                        <span class="toggle-password"
+                            onclick="togglePasswordVisibility('login-password', this)">👁️</span>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+
+            <div class="switch-link">
+                Don't have an account?
+                <a href="#" onclick="switchForm('signup')">Sign Up</a>
+            </div>
+        </div>
+
+        <div id="signup-form">
+            <h2>Create Account</h2>
+            <div class="form-context"></div>
+
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <input type="text" id="signup-name" name="username" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="signup-contactNo" name="contactNo" placeholder="Contact Number(8597816084)"
+                        required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="signup-email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <div class="password-container">
+                        <input type="password" id="signup-password" name="password" placeholder="Password" required>
+                        <span class="toggle-password"
+                            onclick="togglePasswordVisibility('signup-password', this)">👁️</span>
+                    </div>
+                    <button type="submit" class="btn-primary">Sign Up</button>
+            </form>
+
+            <div class="switch-link">
+                Already have an account?
+                <a href="#" onclick="switchForm('login')">Login</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/frontend/register/register.js"></script>
+</body>
+
+</html>

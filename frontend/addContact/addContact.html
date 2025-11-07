@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Contact Details Form</title>
+    <link rel="stylesheet" href="/frontend/addContact/addContact.css">
+</head>
+<body>
+
+<div class="form-container">
+    <div class="form-card">
+        <h1>New Contact Details</h1>
+        <form id="contactForm">
+            <div class="form-row">
+                <input type="text" name="username" placeholder="Full Name" required>
+                <input type="tel" name="contactNo" placeholder="Phone Number" required>
+            </div>
+
+            <div class="form-row">
+                <input type="email" name="email" placeholder="Email Address">
+                <input type="text" name="address" placeholder="Address">
+            </div>
+
+            <div class="form-row">
+                <input type="text" name="profession" placeholder="Profession">
+                <input type="text" name="groups" placeholder="Groups">
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="cancel-btn" onclick="handleCancel()">Cancel</button>
+                <button type="submit" class="save-btn">Save Contact</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="/frontend/addContact/addContact.js"></script>
+
+</body>
+</html>

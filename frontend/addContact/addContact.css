@@ -1,0 +1,157 @@
+/* Import a better font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+    background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%); /* Soft gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333; /* Darker text for better contrast */
+    padding: 20px; /* Add some padding for small screens */
+    box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+}
+
+.form-card {
+    background-color: #ffffff; /* Clean white background */
+    padding: 40px; /* More generous padding */
+    border-radius: 12px; /* Softer rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* More pronounced, soft shadow */
+    width: 100%; /* Make it responsive */
+    max-width: 700px; /* Max width for larger screens */
+    box-sizing: border-box;
+    animation: fadeIn 0.8s ease-out; /* Simple fade-in animation */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    color: #2c3e50; /* A deep, professional blue-gray */
+    font-size: 26px; /* Slightly larger heading */
+    font-weight: 600; /* Bolder for impact */
+    margin-top: 0;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e0e6ed; /* More distinct separator */
+    padding-bottom: 20px;
+    text-align: center; /* Center the heading */
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 25px; /* Increased space between fields */
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+    flex: 1 1 calc(50% - 12.5px); /* Take 50% width minus half the gap */
+    min-width: 250px; /* Ensure inputs don't become too narrow */
+    padding: 14px 18px; /* More padding for a taller, easier-to-tap field */
+    border: 1px solid #dcdfe6; /* Lighter, subtle border */
+    border-radius: 8px; /* More rounded input fields */
+    font-size: 16px; /* Larger text inside inputs for readability */
+    color: #333;
+    background-color: #f8f9fa; /* Very light background for inputs */
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.3s ease; /* Smooth transition for focus and hover */
+}
+
+input::placeholder {
+    color: #9aa5b1; /* Lighter, friendlier placeholder text */
+}
+
+input:focus {
+    border-color: #4a90e2; /* A vibrant blue on focus */
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2); /* Subtle glow on focus */
+    background-color: #ffffff; /* White background on focus */
+}
+
+/* --- Buttons and Actions --- */
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px; /* More space between buttons */
+    margin-top: 40px; /* More space above buttons */
+}
+
+button {
+    padding: 12px 25px; /* Larger buttons, easier to click */
+    border: none;
+    border-radius: 8px; /* Rounded buttons */
+    cursor: pointer;
+    font-weight: 500; /* Medium font weight */
+    font-size: 16px; /* Larger button text */
+    transition: all 0.3s ease; /* Smooth transitions for hover */
+    letter-spacing: 0.5px; /* Slightly spaced letters for better look */
+}
+
+.cancel-btn {
+    background-color: #e9ecef; /* A soft, light gray */
+    color: #6c757d; /* Darker gray text */
+}
+
+.cancel-btn:hover {
+    background-color: #dee2e6; /* Slightly darker on hover */
+    color: #495057;
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.save-btn {
+    background-color: #28a745; /* A pleasant green for save */
+    color: white;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2); /* Subtle shadow for save button */
+}
+
+.save-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(40, 167, 69, 0.3);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .form-card {
+        padding: 30px 20px; /* Adjust padding for smaller screens */
+        border-radius: 8px; /* Slightly less rounded */
+        margin: 10px; /* Ensure some margin from screen edges */
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+    }
+
+    .form-row {
+        flex-direction: column; /* Stack inputs vertically */
+        gap: 15px;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"] {
+        min-width: unset; /* Remove min-width when stacked */
+        width: 100%; /* Full width when stacked */
+    }
+
+    .form-actions {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        gap: 10px;
+        margin-top: 30px;
+    }
+
+    button {
+        width: 100%; /* Full width for stacked buttons */
+        padding: 14px; /* Taller buttons */
+    }
+}

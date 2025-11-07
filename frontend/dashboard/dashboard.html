@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Dashboard</title>
+    <link rel="stylesheet" href="/frontend/dashboard/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1 class="title" id="dashboardTitle">
+                <img id="userProfilePhoto" src="default-avatar.png" alt="User Profile Photo" class="profile-photo"
+                    onclick="navigateToProfile()">
+                User's Contacts
+            </h1>
+            <div class="action-buttons">
+                <button class="btn btn-add" onclick="handleAddContact()">
+                    <i class="fas fa-plus"></i> Add
+                </button>
+                <button class="btn btn-import" onclick="handleImportExport()">
+                    <i class="fas fa-download"></i> Import/Export
+                </button>
+                <button class="btn btn-logout" onclick="handleLogout()" title="Logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </header>
+
+        <section class="contact-section">
+            <h2>Contact List</h2>
+
+            <div class="filter-bar">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search contacts by name or phone..."
+                        onkeyup="filterContacts()">
+                </div>
+
+                <select id="groupFilter" class="filter-dropdown" onchange="filterContacts()">
+                    <option value="All">All Groups</option>
+                </select>
+
+                <button id="favoritesBtn" class="btn btn-favorites" onclick="toggleFavorites()">
+                    <i class="fas fa-star"></i> Favorites
+                </button>
+
+                <button class="btn btn-clear" onclick="clearFilters()">
+                    Clear
+                </button>
+            </div>
+
+            <div id="contactList" class="contact-list">
+                <!-- Contacts will be dynamically rendered here -->
+            </div>
+        </section>
+    </div>
+
+    <script src="/frontend/dashboard/dashboard.js"></script>
+    <script src="/frontend/dashboard/manageContact.js"></script>
+</body>
+
+</html>

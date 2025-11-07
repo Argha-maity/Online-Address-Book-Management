@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Import/Export</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/frontend/import_export/import_export.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Import/Export Contacts</h1>
+            <p>Manage your address book with ease - backup or transfer your contacts</p>
+        </header>
+        
+        <div class="content">
+            <div class="section export-section">
+                <h2><i class="fas fa-file-export"></i> Export Contacts</h2>
+                <p>Download your contacts in Excel format for backup or transfer to other applications.</p>
+                
+                <div class="action-card">
+                    <div class="format-badge">
+                        <i class="fas fa-file-excel"></i>
+                        Excel Format (.xlsx)
+                    </div>
+                    
+                    <p class="info-text">Contacts will be exported as an Excel file with proper column headers and formatting.</p>
+                    
+                    <button id="exportBtn" class="btn">
+                        <i class="fas fa-download"></i> Export to Excel
+                    </button>
+                </div>
+            </div>
+            
+            <div class="section import-section">
+                <h2><i class="fas fa-file-import"></i> Import Contacts</h2>
+                <p>Upload contacts from JSON or Excel files to add them to your address book.</p>
+                
+                <div class="action-card">
+                    <div class="file-input-wrapper">
+                        <input type="file" id="importFile" class="file-input" accept=".json,.xlsx,.xls,.csv">
+                        <label for="importFile" class="file-input-label">
+                            <span>
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span id="fileText">Choose file (JSON or Excel)</span>
+                                <span id="fileName" class="file-name">No file chosen</span>
+                            </span>
+                        </label>
+                    </div>
+                    
+                    <div class="supported-formats">
+                        <div class="format-item">
+                            <i class="fas fa-file-code"></i>
+                            <span>JSON Files</span>
+                        </div>
+                        <div class="format-item">
+                            <i class="fas fa-file-excel"></i>
+                            <span>Excel Files</span>
+                        </div>
+                    </div>
+                    
+                    <button id="importBtn" class="btn">
+                        <i class="fas fa-upload"></i> Import Contacts
+                    </button>
+                    
+                    <div id="importStatus" class="status-message">
+                        Please select a file to import.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <a href="../dashboard/dashboard.html" class="btn back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Dashboard
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="/frontend/import_export/import_export.js"></script>
+</body>
+</html>

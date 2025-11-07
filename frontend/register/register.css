@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fce4ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.auth-container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    padding: 30px;
+    text-align: center;
+    border-top: 5px solid #FF6B6B;
+}
+
+h2 {
+    color: #FF6B6B;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 600;
+}
+
+.auth-container input[type="email"],
+.auth-container input[type="password"],
+.auth-container input[type="text"],
+.auth-container input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background-color: #FF6B6B;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #e05e5e;
+}
+
+.switch-link {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #555;
+    text-align: center;
+}
+
+.switch-link a {
+    color: #FF6B6B;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.switch-link a:hover {
+    color: #e05e5e;
+    text-decoration: underline;
+}
+
+#signup-form {
+    display: none;
+}
+
+.form-context {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.password-container {
+    position: relative; 
+    width: 100%;
+    margin: 0; 
+}
+
+.password-container input[type="password"] {
+    padding-right: 40px !important; 
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    font-size: 1.2em; 
+    color: #FF6B6B;
+    transition: color 0.2s;
+}
+
+.toggle-password:hover {
+    color: #e05e5e;
+}
+
+.auth-container input[type="email"],
+.auth-container input[type="text"],
+.auth-container input[type="tel"],
+.password-container input[type="password"] 
+{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1em;
+}

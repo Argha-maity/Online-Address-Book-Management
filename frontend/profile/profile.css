@@ -1,0 +1,204 @@
+:root {
+    /* Reusing Red Color Palette from dashboard.css */
+    --primary-red: #D32F2F;      
+    --light-red: #EF5350;        
+    --soft-red: #FFEBEE;         
+    --pale-red: #FFF5F5;         
+    --dark-red: #B71C1C;         
+    
+    --text-dark: #212121;        
+    --text-medium: #424242;      
+    --card-bg: #FFFFFF;          
+    --border-light: #FFCDD2;     
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--pale-red) 0%, var(--soft-red) 100%);
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.profile-container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Header and Back Button */
+.profile-header {
+    margin-bottom: 20px;
+}
+
+.btn-back {
+    /* Updated styles for better visibility and edge definition */
+    background-color: var(--card-bg); /* Use white background */
+    border: 1px solid var(--primary-red); /* Give it a red border for clear edges */
+    color: var(--primary-red); /* Set the text/icon color to primary red */
+    font-size: 1em;
+    padding: 10px 18px; /* Slightly more padding for a better feel */
+    border-radius: 8px; /* Slightly more rounded edges (or use 5px for consistency) */
+    cursor: pointer;
+    font-weight: 600; /* Make text bolder */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    transition: all 0.2s;
+}
+
+.btn-back:hover {
+    background-color: var(--primary-red); /* Fill with red on hover */
+    color: white; /* Change text to white on hover */
+    box-shadow: 0 2px 8px rgba(211, 47, 47, 0.3); /* Add a shadow */
+    transform: translateY(-1px); /* Slight lift effect */
+}
+
+.page-title {
+    color: var(--dark-red);
+    font-size: 2em;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border-light);
+}
+
+/* Main Card Layout */
+.profile-card {
+    display: flex;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Contains floats */
+}
+
+/* Photo Section (Left Column) */
+.photo-section {
+    flex: 0 0 30%; /* Fixed width for the left side */
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--soft-red);
+    text-align: center;
+}
+
+.current-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-red);
+    margin-bottom: 15px;
+}
+
+.profile-name {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.btn-upload {
+    display: block;
+    padding: 10px 15px;
+    background-color: var(--primary-red);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.btn-upload:hover {
+    background-color: var(--dark-red);
+}
+
+/* Details Section (Right Column) */
+.details-section {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.details-section h2 {
+    color: var(--primary-red);
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--text-medium);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.form-group input[readonly] {
+    background-color: #f5f5f5;
+    color: #888;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.3s, background-color 0.3s;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    background-color: var(--primary-red);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-red);
+}
+
+.btn-secondary {
+    background-color: var(--text-medium);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #333;
+}
+
+/* Separator */
+.details-section hr {
+    margin: 25px 0;
+    border: 0;
+    border-top: 1px solid var(--border-light);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .profile-card {
+        flex-direction: column;
+    }
+
+    .photo-section {
+        flex: none;
+        padding: 20px;
+    }
+}
