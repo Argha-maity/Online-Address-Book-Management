@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         try {
-            const response = await fetch("http://localhost:8001/api/contact/export", {
+            const response = await fetch("https://online-address-book-management.onrender.com/api/contact/export", {
                 method: "GET",
                 headers: {
                     "Authorization": `Bearer ${token}`,
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         try {
-            const response = await fetch("http://localhost:8001/api/contact/import", {
+            const response = await fetch("https://online-address-book-management.onrender.com/api/contact/import", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
         formData.append("file", file); 
 
         try {
-            const response = await fetch("http://localhost:8001/api/contact/import", {
+            const response = await fetch("https://online-address-book-management.onrender.com/api/contact/import", {
                 method: "POST",
                 headers: {
                     "Authorization": `Bearer ${token}`,

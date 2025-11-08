@@ -42,7 +42,7 @@ signupForm.addEventListener("submit", async (e) => {
     };
 
     try {
-        const response = await fetch("http://localhost:8001/api/users/signup", {
+        const response = await fetch("https://online-address-book-management.onrender.com/api/users/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -73,7 +73,7 @@ loginForm.addEventListener("submit", async (e) => {
     const password = document.getElementById("login-password").value;
 
     try {
-        const response = await fetch("http://localhost:8001/api/users/login", {
+        const response = await fetch("https://online-address-book-management.onrender.com/api/users/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

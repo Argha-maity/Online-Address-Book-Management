@@ -3,7 +3,7 @@ const passwordForm = document.getElementById('passwordForm');
 const photoUpload = document.getElementById('photoUpload');
 const profilePhotoDisplay = document.getElementById('profilePhotoDisplay');
 const usernameDisplay = document.getElementById('usernameDisplay');
-const backendBase = "http://localhost:8001";
+const backendBase = "https://online-address-book-management.onrender.com";
 
 function getToken() {
     return localStorage.getItem("token");
@@ -18,7 +18,7 @@ async function fetchUserProfile() {
     }
 
     try {
-        const response = await fetch(`http://localhost:8001/api/users/profile`, {
+        const response = await fetch(`https://online-address-book-management.onrender.com/api/users/profile`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`,
@@ -35,7 +35,7 @@ async function fetchUserProfile() {
             usernameDisplay.textContent = user.username || "User Account";
 
             if (user.profilePhotoUrl && user.profilePhotoUrl !== "default-avatar.png") {
-                profilePhotoDisplay.src = `${backendBase}${user.profilePhotoUrl}`;
+                profilePhotoDisplay.src = `${backendBase}/${user.profilePhotoUrl}`;
             } else {
                 profilePhotoDisplay.src = `${backendBase}/uploads/profile_photos/default-avatar.png`;
             }
@@ -71,7 +71,7 @@ profileForm.addEventListener('submit', async (e) => {
     };
 
     try {
-        const response = await fetch(`http://localhost:8001/api/users/profile`, {
+        const response = await fetch(`https://online-address-book-management.onrender.com/api/users/profile`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -114,7 +114,7 @@ passwordForm.addEventListener('submit', async (e) => {
     }
 
     try {
-        const response = await fetch(`http://localhost:8001/api/users/change-password`, {
+        const response = await fetch(`https://online-address-book-management.onrender.com/api/users/change-password`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -151,7 +151,7 @@ async function uploadProfilePhoto(file) {
     formData.append('profilePhoto', file);
 
     try {
-        const response = await fetch(`http://localhost:8001/api/users/profile-photo`, {
+        const response = await fetch(`https://online-address-book-management.onrender.com/api/users/profile-photo`, {
             method: 'PUT',
             headers: {
                 "Authorization": `Bearer ${token}`,
