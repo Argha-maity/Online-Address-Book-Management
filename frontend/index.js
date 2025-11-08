@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.btn-login').forEach(button => {
         button.addEventListener('click', function() {
-            window.location.href = "../register/register.html";
+            window.location.href = "./register/register.html";
         });
     });
     
     document.querySelectorAll('.btn-signup, .btn-hero').forEach(button => {
         button.addEventListener('click', function() {
-            window.location.href = "../register/register.html";
+            window.location.href = "./register/register.html";
         });
     });
 

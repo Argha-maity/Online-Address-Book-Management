@@ -152,7 +152,7 @@ function handleLogout() {
     localStorage.removeItem("username");
     localStorage.removeItem("userEmail");
     sessionStorage.clear();
-    window.location.href = "../landingPage/index.html"; 
+    window.location.href = "./index.html"; 
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
