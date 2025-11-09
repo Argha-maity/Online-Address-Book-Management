@@ -6,9 +6,7 @@ frontend/node_modules
 backend/.env
 
 # Uploads folder
-backend/uploads
-backend/public
-frontend/files
+
 
 # Logs
 *.log
