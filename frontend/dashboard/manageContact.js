@@ -12,7 +12,7 @@ async function handleDelete(contactId) {
     }
 
     try {
-        const response = await fetch(`http://localhost:8001/api/contact/delete/${contactId}`, {
+        const response = await fetch(`https://online-address-book-management.onrender.com/api/contact/delete/${contactId}`, {
             method: "DELETE",
             headers: {
                 "Authorization": `Bearer ${token}`,
