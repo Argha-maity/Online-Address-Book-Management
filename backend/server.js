@@ -8,7 +8,7 @@ const path = require("path");
 const app = express();
 
 app.use(cors({
-  origin: "https://online-address-book-management.netlify.app",  
+  origin: "https://address-book-management.netlify.app",  
   credentials: true
 }));
 app.use(bodyParser.json());
