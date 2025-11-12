@@ -117,7 +117,7 @@ async function getUserProfile(req, res) {
 
         let photoUrl = user.profilePhotoUrl;
         if (photoUrl && !photoUrl.startsWith("http")) {
-            photoUrl = `http://localhost:8001${photoUrl.startsWith("/") ? "" : "/"}${photoUrl}`;
+            photoUrl = `https://online-address-book-management.onrender.com${photoUrl.startsWith("/") ? "" : "/"}${photoUrl}`;
         }
 
         return res.status(200).json({
@@ -126,7 +126,7 @@ async function getUserProfile(req, res) {
                 username: user.username,
                 contactNo: user.contactNo,
                 email: user.email,
-                profilePhotoUrl: photoUrl || "http://localhost:8001/uploads/profile_photos/default-avatar.png",
+                profilePhotoUrl: photoUrl || "https://online-address-book-management.onrender.com/uploads/profile_photos/default-avatar.png",
             },
         });
     } catch (error) {
