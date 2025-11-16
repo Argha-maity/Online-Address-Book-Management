@@ -7,6 +7,5 @@ backend/.env
 
 # Uploads folder
 
-
 # Logs
 *.log
